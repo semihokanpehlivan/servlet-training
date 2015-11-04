@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>Ch3Beer</servlet-name>
+        <servlet-class>com.example.web.BeerSelect</servlet-class>
+
+        <init-param>
+            <param-name>mail</param-name>
+            <param-value>semihokanp@gmail.com</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Ch3Beer</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Other</servlet-name>
+        <servlet-class>com.example.web.OtherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Other</servlet-name>
+        <url-pattern>/Other</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>Okan</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>param</param-name>
+        <param-value>context-value-for-context-listener</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>com.example.listener.MyServletContextListener</listener-class>
+    </listener>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
+    <security-role>
+        <role-name>Admin</role-name>
+        <description>Role of admin</description>
+    </security-role>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>WebResourceName</web-resource-name>
+
+            <!-- the constrained URLs below:-->
+            <url-pattern>/Other</url-pattern>
+
+            <!-- Only this HTTP methods can access to constrained URLs-->
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+
+        </web-resource-collection>
+
+        <auth-constraint>
+            <!-- Only this or these user(s)-Authorized- can access to constrained URLs -->
+            <role-name>Admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>
