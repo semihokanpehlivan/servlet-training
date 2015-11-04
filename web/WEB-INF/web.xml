@@ -67,7 +67,7 @@
         </web-resource-collection>
 
         <auth-constraint>
-            <!-- Only this or these user(s)-Authorized- can access to constrained URLs -->
+            <!-- Only this or these user(s)-Authorized- can access to constrained URLs-->
             <role-name>Admin</role-name>
         </auth-constraint>
     </security-constraint>
