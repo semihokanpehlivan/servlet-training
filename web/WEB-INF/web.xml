@@ -66,9 +66,11 @@
 
         </web-resource-collection>
 
+        <!-- If an <auth-constain> element exists, Tomcat(Container must perform the authentication for all URLs)-->
         <auth-constraint>
             <!-- Only this or these user(s)-Authorized- can access to constrained URLs-->
             <role-name>Admin</role-name>
+            <description>ALLOW the user role above for constained requests</description>
         </auth-constraint>
     </security-constraint>
 </web-app>
