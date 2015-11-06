@@ -63,6 +63,7 @@
 
             <!-- the constrained URLs below:-->
             <url-pattern>/Other</url-pattern>
+            <url-pattern>/form.html</url-pattern>
 
             <!-- Only this HTTP methods can access to constrained URLs, if you don't declare any HTTP method, you provide to constain ALL HTTP methods.-->
             <http-method>GET</http-method>
