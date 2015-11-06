@@ -76,5 +76,10 @@
             <role-name>Admin</role-name>
             <description>ALLOW the user role above for constained requests</description>
         </auth-constraint>
+
+        <!-- All data integrity and confidentiality is handled in this xml tag-->
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
 </web-app>
