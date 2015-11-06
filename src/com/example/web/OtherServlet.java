@@ -12,7 +12,7 @@ import java.io.IOException;
 public class OtherServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         String color = req.getParameter("color");
         resp.getWriter().print("Other"+color);
