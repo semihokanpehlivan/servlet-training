@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * @author Semih Okan Pehlivan.
  */
-public class FilterExample implements Filter{
+public class RequestCounterFilter implements Filter{
 
     private FilterConfig filterConfig;
 
