@@ -79,9 +79,9 @@
         </auth-constraint>
 
         <!-- All data integrity and confidentiality is handled in this xml tag-->
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
+        <!--<user-data-constraint>-->
+            <!--<transport-guarantee>CONFIDENTIAL</transport-guarantee>-->
+        <!--</user-data-constraint>-->
     </security-constraint>
 
     <!-- -->
@@ -95,6 +95,6 @@
 
     <filter-mapping>
         <filter-name>RequestCounter</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 </web-app>
