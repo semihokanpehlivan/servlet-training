@@ -27,6 +27,7 @@ public class RequestCounterFilter implements Filter{
         logger.info("Filter Response info:"+ response);
 //        no problem using chain.doFilter(request,response);
         chain.doFilter(req,response);
+        logger.info("under-line Response info:"+response);
     }
 
     public void destroy() {

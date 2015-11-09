@@ -17,6 +17,7 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("--------Inside the HomeServlet class-------");
         PrintWriter out = resp.getWriter();
         out.print("HOME SERVLET");
         logger.info("Servlet Response info:" + resp);
