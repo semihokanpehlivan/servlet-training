@@ -23,7 +23,9 @@ public class RequestCounterFilter implements Filter{
 //        the parameters is not HTTPSevletRequest or Response, it need to be casted to HTTPServets
         HttpServletRequest req = (HttpServletRequest) request;
         System.out.println(req);
-        logger.info("Request info:"+ req.getLocalPort());
+        logger.info("Request info:"+ req.getQueryString());
+//        no problem using chain.doFilter(request,response);
+        chain.doFilter(req,response);
     }
 
     public void destroy() {
