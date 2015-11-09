@@ -2,7 +2,9 @@ package com.example.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.logging.Logger;
 
 /**
@@ -28,6 +30,9 @@ public class RequestCounterFilter implements Filter{
 //        no problem using chain.doFilter(request,response);
         chain.doFilter(req,response);
         logger.info("under-line Response info:"+response);
+        HttpServletResponse resp = (HttpServletResponse) response;
+        PrintWriter out = resp.getWriter();
+        out.print("Inside the filter");
     }
 
     public void destroy() {
