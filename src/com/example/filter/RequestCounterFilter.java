@@ -24,6 +24,7 @@ public class RequestCounterFilter implements Filter{
         HttpServletRequest req = (HttpServletRequest) request;
         System.out.println(req);
         logger.info("Request info:"+ req.getQueryString());
+        logger.info("Filter Response info:"+ response);
 //        no problem using chain.doFilter(request,response);
         chain.doFilter(req,response);
     }

@@ -3,7 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
+    
+    <!-- -->
+    <!-- Servlet naming and mapping-URLs-->
     <servlet>
         <servlet-name>Ch3Beer</servlet-name>
         <servlet-class>com.example.web.BeerSelect</servlet-class>
@@ -29,7 +31,21 @@
         <servlet-name>Other</servlet-name>
         <url-pattern>/Other</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.example.web.HomeServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
 
+    <!-- -->
+    <!-- End of servlet naming and mapping URLs-->
+    <!-- -->
+    
     <context-param>
         <param-name>name</param-name>
         <param-value>Okan</param-value>
@@ -85,7 +101,7 @@
     </security-constraint>
 
     <!-- -->
-    <!-- Filters-->
+    <!-- Filters naming and mapping URLs-->
     <!-- -->
 
     <filter>
@@ -97,4 +113,8 @@
         <filter-name>RequestCounter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <!-- -->
+    <!-- End of filters naming and mapping URLs-->
+    <!-- -->
 </web-app>

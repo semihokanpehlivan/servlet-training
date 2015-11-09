@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 /**
  * @autor semih
@@ -17,6 +18,8 @@ public class BeerSelect extends HttpServlet{
     }
 
     String str;
+
+    private static Logger logger = Logger.getLogger(BeerSelect.class.getName());
 
     @Override
     public void init() throws ServletException {
@@ -53,6 +56,7 @@ public class BeerSelect extends HttpServlet{
         String mail = getServletConfig().getInitParameter("mail");
         System.out.println(mail +" and Servlet name: "+getServletConfig().getServletName());
 
+        logger.info("Servlet response info:" + resp);
 
         //context input attr
         String attr = req.getParameter("attr");
