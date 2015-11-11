@@ -8,7 +8,7 @@
     <!-- Servlet naming and mapping-URLs-->
     <servlet>
         <servlet-name>Ch3Beer</servlet-name>
-        <servlet-class>com.example.web.BeerSelect</servlet-class>
+        <servlet-class>com.example.web.controller.BeerSelect</servlet-class>
 
         <init-param>
             <param-name>mail</param-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>Other</servlet-name>
-        <servlet-class>com.example.web.OtherServlet</servlet-class>
+        <servlet-class>com.example.web.controller.OtherServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -34,7 +34,7 @@
     
     <servlet>
         <servlet-name>HomeServlet</servlet-name>
-        <servlet-class>com.example.web.HomeServlet</servlet-class>
+        <servlet-class>com.example.web.controller.HomeServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>

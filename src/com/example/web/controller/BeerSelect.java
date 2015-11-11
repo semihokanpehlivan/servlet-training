@@ -1,4 +1,4 @@
-package com.example.web;
+package com.example.web.controller;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
