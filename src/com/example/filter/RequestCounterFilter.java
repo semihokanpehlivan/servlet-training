@@ -1,5 +1,7 @@
 package com.example.filter;
 
+import com.example.web.wrapper.CompressionResponseWrapper;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,8 +29,9 @@ public class RequestCounterFilter implements Filter{
         System.out.println(req);
         logger.info("Request info:"+ req.getQueryString());
         logger.info("Filter Response info:"+ response);
+        CompressionResponseWrapper responseWrapper = new CompressionResponseWrapper((HttpServletResponse)response);
 //        no problem using chain.doFilter(request,response);
-        chain.doFilter(req,response);
+        chain.doFilter(req,responseWrapper);
         logger.info("under-line Response info:"+response);
         HttpServletResponse resp = (HttpServletResponse) response;
         PrintWriter out = resp.getWriter();
